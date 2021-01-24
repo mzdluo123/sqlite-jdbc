@@ -21,6 +21,4 @@ jobs:
           key: ${{ runner.os }}-jdk11-${{ hashFiles('**/*.sbt') }}
           restore-keys: ${{ runner.os }}-jdk11-
       - name: Run Build
-        run: |
-        chmod +x ./docker/dockcross-android-arm64
-        make linux-android-arm64
+        run:  chmod +x ./docker/dockcross-android-arm64make && linux-android-arm64
